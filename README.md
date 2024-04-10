@@ -3,7 +3,6 @@
 [![Deploy to Azure Container Apps](https://github.com/Azure-Samples/orleans-blazor-server-shopping-cart-on-container-apps/actions/workflows/deploy.yml/badge.svg)](https://github.com/Azure-Samples/orleans-blazor-server-shopping-cart-on-container-apps/actions/workflows/deploy.yml)
 
 A canonical shopping cart sample application, built using Microsoft Orleans. This app shows the following features:
-
 - **Shopping cart**: A simple shopping cart application that uses Orleans for its cross-platform framework support, and its scalable distributed applications capabilities.
 
   - **Inventory management**: Edit and/or create product inventory.

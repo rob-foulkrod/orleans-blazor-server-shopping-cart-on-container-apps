@@ -6,9 +6,9 @@ on:
     - main
 
 env:
-  UNIQUE_APP_NAME: orleanscart
-  SILO_IMAGE_NAME: orleanscart-silo
-  AZURE_RESOURCE_GROUP_NAME: orleans-resourcegroup
+  UNIQUE_APP_NAME: justacart-rf
+  SILO_IMAGE_NAME: justacart-silo
+  AZURE_RESOURCE_GROUP_NAME: justacart-rg
   AZURE_RESOURCE_GROUP_LOCATION: eastus
 
 jobs:
@@ -25,10 +25,12 @@ jobs:
     - name: .NET publish shopping cart app
       run: dotnet publish ./Silo/Orleans.ShoppingCart.Silo.csproj --configuration Release
 
-    - name: Login to Azure
-      uses: azure/login@v1
+    - name: Azure login
+      uses: azure/login@v2
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        client-id: ${{ secrets.AZURE_CLIENT_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
     - name: Flex ACR bicep
       run: |

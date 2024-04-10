@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  UNIQUE_APP_NAME: justacart-rf
+  UNIQUE_APP_NAME: justacartrf #this will be used to create a storage account too. omit special characters
   SILO_IMAGE_NAME: justacart-silo
   AZURE_RESOURCE_GROUP_NAME: justacart-rg
   AZURE_RESOURCE_GROUP_LOCATION: eastus
